@@ -1,0 +1,118 @@
+<html><head><title></title>
+<script>
+
+doCycleFlag = false;
+myString = "Long live the Commodore 64, king of personal computers!";
+setInterval("doCycle()", 10);
+colData = new Array();
+colData[0]  = "#ffffff";
+colData[1]  = "#ffffff";
+colData[2]  = "#ffffff";
+colData[3]  = "#ffffff";
+colData[4]  = "#ffffff";
+colData[5]  = "#ffffff";
+colData[6]  = "#ffff00";
+colData[7]  = "#ffff00";
+colData[8]  = "#ffff00";
+colData[9]  = "#ffff00";
+colData[10] = "#ffff00";
+colData[11] = "#ffff00";
+colData[12] = "#ff9600";
+colData[13] = "#ff9600";
+colData[14] = "#ff9600";
+colData[15] = "#ff9600";
+colData[16] = "#ff9600";
+colData[17] = "#ff9600";
+colData[18] = "#ff4000";
+colData[19] = "#ff4000";
+colData[20] = "#ff4000";
+colData[21] = "#ff4000";
+colData[22] = "#ff4000";
+colData[23] = "#ff4000";
+colData[24] = "#ff0000";
+colData[25] = "#ff0000";
+colData[26] = "#ff0000";
+colData[27] = "#ff0000";
+colData[28] = "#ff0000";
+colData[29] = "#ff0000";
+colData[30] = "#000000";
+colData[31] = "#000000";
+colData[32] = "#000000";
+colData[33] = "#000000";
+colData[34] = "#000000";
+colData[35] = "#000000";
+colData[36] = "#000000";
+colData[37] = "#000000";
+colData[38] = "#000000";
+colData[39] = "#000000";
+colData[40] = "#000000";
+colData[41] = "#000000";
+colData[42] = "#ff0000";
+colData[43] = "#ff0000";
+colData[44] = "#ff0000";
+colData[45] = "#ff0000";
+colData[46] = "#ff0000";
+colData[47] = "#ff0000";
+colData[48] = "#ff4000";
+colData[49] = "#ff4000";
+colData[50] = "#ff4000";
+colData[51] = "#ff4000";
+colData[52] = "#ff4000";
+colData[53] = "#ff4000";
+colData[54] = "#ff9600";
+colData[55] = "#ff9600";
+colData[56] = "#ff9600";
+colData[57] = "#ff9600";
+colData[58] = "#ff9600";
+colData[59] = "#ff9600";
+colData[60] = "#ffff00";
+colData[61] = "#ffff00";
+colData[62] = "#ffff00";
+colData[63] = "#ffff00";
+colData[64] = "#ffff00";
+colData[65] = "#ffff00";
+colData[66] = "#ffffff";
+colData[67] = "#ffffff";
+colData[68] = "#ffffff";
+colData[69] = "#ffffff";
+colData[70] = "#ffffff";
+colData[71] = "#ffffff";
+
+function doCycle() {
+ if (doCycleFlag) {
+  finalHTML = "";
+	for (i = 0; i < myString.length; i++) {
+	 finalHTML = finalHTML + "<font color=" + colData[i] + ">" + myString.substr(i, 1) + "</font>";
+	}
+	cycleSpan.innerHTML = finalHTML;
+	tempCol = colData[1];
+	for (i = 0; i < (colData.length - 1); i++) {
+   colData[i] = colData[i + 1];
+  }
+	colData[colData.length - 1] = tempCol;
+ }
+}
+
+</script>
+</head>
+<body onLoad="cycleSpan.innerText=myString;" bgcolor="#000000">
+<br><br>
+<center>
+<font style="color:#ffffff;font-size:18">
+I was feeling a bit nostalgic the other day- I remembered a little effect that was big on the Commodore 64 demo scene
+for a long time, and I wanted to see it again (without digging through my attic for my real C64).  So, here it is again,
+done in the modern technologies of dHTML and JavaScript.  Enjoy!
+</font>
+<br><br>
+<span id="cycleSpan" style="font-size:24;color:#808080"></span>
+<br><br>
+<input type="button" name="startCycle" value="Start Cycling Colors" onClick="doCycleFlag=true;">
+<br><br>
+<font style="color:#ffffff;font-size:12">
+Use this code as you wish, but please credit <a href="mailto:fzammetti@omnytex.com">Frank W. Zammetti</a> of <a href="http://www.omnytex.com">Omnytex Technologies</a>.  
+<br>
+(I know this code is no big deal, but I like my ego stroked as much as anyone!)
+</font>
+</center>
+</body>
+</html>

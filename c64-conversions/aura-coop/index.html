@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>Aura — a cooperative C64 demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity">
+          <h1>AURA</h1>
+          <span>A cooperative demo project</span>
+        </div>
+        <div class="edition">COMMODORE 64 <span>NTSC / PHASER</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="Demo screen. Press Space to enter Aura."></div>
+        <div id="loading" role="status">Unpacking 1990…</div>
+      </section>
+      <nav class="toolbar" aria-label="Demo controls">
+        <div class="pages" role="group" aria-label="Demo page">
+          <button type="button" data-page="welcome" aria-pressed="true">00 <span>Welcome</span></button>
+          <button type="button" data-page="fantasy" aria-pressed="false">01 <span>Fantasy</span></button>
+          <button type="button" data-page="infiltrator" aria-pressed="false">02 <span>Infiltrator</span></button>
+        </div>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false">Pause</button>
+          <button type="button" id="fullscreen">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">SPACE to enter Aura</p>
+        <p class="keys">0–2 pages · R restart · M sound · P pause · F fullscreen</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>
+          Fantasy and Infiltrator’s July 1990 cooperative demo, reconstructed from the supplied
+          <code>aura_coop.prg</code>. The artwork, character sets, scroll messages, animation tables, and music
+          register sequences come from that program. Both pages run as native JavaScript inside Phaser 3.88.2,
+          not as a C64 emulator or a video.
+        </p>
+        <p>
+          Space follows the original sequence: welcome → Fantasy → Infiltrator. The numbered page selectors,
+          pause, restart, and fullscreen controls are additions. The welcome screen’s telephone number is historical.
+          Audio uses a browser SID-style synthesizer; analog filtering and cycle-level raster details
+          are approximations.
+          Timing targets NTSC: 263 raster lines, 65 CPU cycles per line, approximately 59.83 frames per second.
+        </p>
+        <p>
+          Fantasy’s music loop was verified against the recovered player state. Infiltrator’s music
+          replays 50,000 captured frame updates before restarting; its complete player-state
+          loop was not established.
+        </p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>

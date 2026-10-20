@@ -1,0 +1,28 @@
+{
+  "source": "aura_coop.prg",
+  "sha256": "d0c818541e119e924d37310384306409f9ff7d1d8d4133ddcd27c040adec7026",
+  "phaser": "3.88.2",
+  "clock": 1022730,
+  "frameRate": 59.82626498976309,
+  "music": {
+    "fantasy": {
+      "frames": 7779,
+      "loopStart": 1923,
+      "rate": 59.82626498976309,
+      "loopVerified": true
+    },
+    "infiltrator": {
+      "frames": 50000,
+      "loopStart": 0,
+      "rate": 59.82626498976309,
+      "loopVerified": false
+    }
+  },
+  "startup": {
+    "fantasy": 1706230,
+    "infiltrator": 1736440
+  },
+  "standard": "NTSC",
+  "cyclesPerLine": 65,
+  "rasterLines": 263
+}

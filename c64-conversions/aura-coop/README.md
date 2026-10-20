@@ -1,15 +1,15 @@
-# Fantasy World — Phaser reconstruction
+# Aura — Phaser reconstruction
 
-A native JavaScript reconstruction of New Age's 1988 Commodore 64 demo. Phaser 3.88.2
+A native JavaScript reconstruction of Coop's 1990 Commodore 64 demo. Phaser 3.88.2
 presents the recovered 384 × 247 NTSC display. The browser does not run a C64 emulator.
 Original character sets, screen data, sprites, bitmap, scroll messages, and animation
 routines are preserved across the welcome screen and four main sections.
 
 ## Run
 
-https://zammetti.com/c64-conversions/fantasy-world
+https://zammetti.com/c64-conversions/aura-coop
 
-Use Space or click the picture to advance. The section buttons and keys 0–4 jump directly
+Use Space or click the picture to advance. The section buttons and keys 0–2 jump directly
 to a section. R replays the current section, M toggles sound, P pauses, and F toggles
 fullscreen. Escape also leaves fullscreen. Browser audio starts after an interaction.
 

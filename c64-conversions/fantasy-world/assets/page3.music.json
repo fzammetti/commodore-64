@@ -1,0 +1,20 @@
+{
+  "rate": 59.82626498976309,
+  "loopStart": 0,
+  "frames": 10312,
+  "loopVerified": false,
+  "standard": "NTSC",
+  "clock": 1022730,
+  "cyclesPerLine": 65,
+  "rasterLines": 263,
+  "cyclesPerFrame": 17095,
+  "originCycle": 23709676,
+  "endCycle": 200000000,
+  "durationSeconds": 172.36576613573476,
+  "source": "VICE trace of the original machine code",
+  "writes": 111693,
+  "playerCalls": 9595,
+  "completeFrameWrites": 111668,
+  "capturedWrites": 111670,
+  "capturedPlayerCalls": 9595
+}

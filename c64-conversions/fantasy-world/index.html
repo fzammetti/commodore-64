@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>Fantasy World — Commodore 64 reconstruction</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity">
+          <h1>FANTASY WORLD</h1>
+          <span>A Commodore 64 reconstruction</span>
+        </div>
+        <div class="edition">COMMODORE 64 <span>PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="Fantasy World display. Press Space to start or advance."></div>
+        <div id="loading" role="status">Loading Fantasy World…</div>
+      </section>
+      <nav id="pages" class="pages" aria-label="Demo sections"></nav>
+      <nav class="toolbar" aria-label="Demo controls">
+        <button type="button" id="advance">Enter demo →</button>
+        <button type="button" id="restart" title="Restart (R)">Restart</button>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M)">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P)">Pause</button>
+          <button type="button" id="fullscreen" title="Toggle fullscreen (F)">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">SPACE to start / advance</p>
+        <p class="keys">0–4 select part · R replay · M sound · P pause · F fullscreen</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>
+          Fantasy World, recreated for the browser from the supplied Commodore 64 program,
+          <code>fantasy_world.prg</code>. Built with Phaser, with a presentation shell adapted from
+          the neighboring Aura reconstruction. The supplied PRG is preserved; four damaged bytes were corrected in a separate analysis copy using the archived release.
+        </p>
+        <p>
+          The surrounding controls are browser additions. Use Space to advance between sections.
+          Sound starts after a click or key press. Music captures restart after about three minutes.
+        </p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>
+
+

@@ -1,6 +1,6 @@
 # Fantasy World — Phaser reconstruction
 
-A native JavaScript reconstruction of New Age's 1988 Commodore 64 demo. Phaser 3.88.2
+A native JavaScript reconstruction of Newage's 1988 Commodore 64 demo. Phaser 3.88.2
 presents the recovered 384 × 247 NTSC display. The browser does not run a C64 emulator.
 Original character sets, screen data, sprites, bitmap, scroll messages, and animation
 routines are preserved across the welcome screen and four main sections.

@@ -1,0 +1,131 @@
+{
+  "credits": {
+    "file": "sid-credits.bin",
+    "rate": 59.998240056318195,
+    "frames": 18000,
+    "loopStart": 0,
+    "verifiedLoop": false,
+    "loopVerifiedTicks": 0,
+    "durationSeconds": 300.0087999765334,
+    "sourceSnapshot": "main.ram",
+    "sourceSha256": "e52460c36c01eb166438c3fcac10c81c0226459bba5c1c6825d65014f9992724",
+    "initAddress": 4096,
+    "playAddress": 4138,
+    "initWrites": 24,
+    "totalWrites": 303139,
+    "maximumPlayCycles": 2065,
+    "ioReads": [
+      "$d020"
+    ],
+    "sha256": "69f9b8444fc66b3abeef57558367fb86f8034de62b91c65f13e30feb13b52369",
+    "limitations": [
+      "Ordered SID writes are retained per music tick; intra-tick cycle spacing is not encoded.",
+      "The offline 6502 runner does not model VIC/CIA contention or analog SID behavior.",
+      "No complete state repeat found in 300 seconds; playback restarts the finite capture."
+    ],
+    "timerLatch": 17045,
+    "timingEvidence": "main.vsf CIA1 v2.5 timer A latch, not the live DC04/DC05 counter.",
+    "snapshotLayoutReference": "https://raw.githubusercontent.com/VICE-Team/svn-mirror/main/vice/src/core/ciacore.c"
+  },
+  "page1": {
+    "file": "sid-page1.bin",
+    "rate": 59.82626498976309,
+    "frames": 17948,
+    "loopStart": 0,
+    "verifiedLoop": false,
+    "loopVerifiedTicks": 0,
+    "durationSeconds": 300.00201421685097,
+    "sourceSnapshot": "page1-entry.ram",
+    "sourceSha256": "07005b4bec1a92877161aa419454224e60cd745a6a08c610817598eb7abefad7",
+    "initAddress": 6408,
+    "playAddress": 4138,
+    "initWrites": 24,
+    "totalWrites": 282914,
+    "maximumPlayCycles": 2428,
+    "ioReads": [
+      "$d020"
+    ],
+    "sha256": "f0877d7396a47e6fea43354bd8dd00260c18e4535ac4c41870b870d1bc6a2056",
+    "limitations": [
+      "Ordered SID writes are retained per music tick; intra-tick cycle spacing is not encoded.",
+      "The offline 6502 runner does not model VIC/CIA contention or analog SID behavior.",
+      "No complete state repeat found in 300 seconds; playback restarts the finite capture."
+    ]
+  },
+  "page2": {
+    "file": "sid-page2.bin",
+    "rate": 59.82626498976309,
+    "frames": 11522,
+    "loopStart": 3842,
+    "verifiedLoop": true,
+    "loopVerifiedTicks": 7680,
+    "durationSeconds": 192.59099664623116,
+    "sourceSnapshot": "page2-entry.ram",
+    "sourceSha256": "226a9340bebde701b6b3f3fd4aa98a1bc5be219a255680e8cc15b0f218902b9a",
+    "initAddress": 4096,
+    "playAddress": 4099,
+    "initWrites": 0,
+    "totalWrites": 213381,
+    "maximumPlayCycles": 1933,
+    "ioReads": [
+      "$d020"
+    ],
+    "sha256": "35a49956a2a80db53d4eb01a2a745e50f6079bda4bcb22210867dd10e355c21d",
+    "limitations": [
+      "Ordered SID writes are retained per music tick; intra-tick cycle spacing is not encoded.",
+      "The offline 6502 runner does not model VIC/CIA contention or analog SID behavior."
+    ]
+  },
+  "page3": {
+    "file": "sid-page3.bin",
+    "rate": 59.82626498976309,
+    "frames": 8834,
+    "loopStart": 1154,
+    "verifiedLoop": true,
+    "loopVerifiedTicks": 7680,
+    "durationSeconds": 147.66089779316144,
+    "sourceSnapshot": "page3-entry.ram",
+    "sourceSha256": "3da3d1b361c16803b2c2ac30ea7ef1f7a54f7e6c26de8441d90087ad85fbfb98",
+    "initAddress": 2842,
+    "playAddress": 3013,
+    "initWrites": 28,
+    "totalWrites": 194403,
+    "maximumPlayCycles": 2202,
+    "ioReads": [],
+    "sha256": "7596eea5409db1f3263a600687c35845a8885df24abd12c8bf2d61cc6863d049",
+    "limitations": [
+      "Ordered SID writes are retained per music tick; intra-tick cycle spacing is not encoded.",
+      "The offline 6502 runner does not model VIC/CIA contention or analog SID behavior."
+    ]
+  },
+  "page4": {
+    "file": "sid-page4.bin",
+    "rate": 59.82626498976309,
+    "frames": 3075,
+    "loopStart": 3,
+    "verifiedLoop": true,
+    "loopVerifiedTicks": 3072,
+    "durationSeconds": 51.39882960312106,
+    "sourceSnapshot": "page4-entry.ram",
+    "sourceSha256": "9abf292c33cbc37ae733ce7b1fa1f4b107611787b9a0bf006d1806a25d3d451c",
+    "initAddress": 6095,
+    "playAddress": 6028,
+    "initWrites": 24,
+    "totalWrites": 48228,
+    "maximumPlayCycles": 1527,
+    "ioReads": [],
+    "sha256": "142443d6f381f30710e1d7fdf115d61b3a1a8ede736412e5ab03500aff6bdfc4",
+    "limitations": [
+      "Ordered SID writes are retained per music tick; intra-tick cycle spacing is not encoded.",
+      "The offline 6502 runner does not model VIC/CIA contention or analog SID behavior."
+    ]
+  },
+  "finale": {
+    "file": "sid-finale.bin",
+    "rate": 59.82626498976309,
+    "frames": 2,
+    "loopStart": 1,
+    "verifiedLoop": true,
+    "description": "Original $2600 held three-voice sawtooth tone, not a recorded song."
+  }
+}

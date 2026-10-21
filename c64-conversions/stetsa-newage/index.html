@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>Stetsa — Newage / Commodore 64</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity"><h1>STETSA</h1><span>Fantasy of Newage · 1989</span></div>
+        <div class="edition">COMMODORE 64 <span>NTSC · PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="Stetsa display. Space advances to the next part."></div>
+        <div id="loading" role="status">Loading Stetsa…</div>
+      </section>
+      <nav id="pages" class="pages" aria-label="Demo sections"></nav>
+      <nav id="patterns" class="pages" aria-label="Color patterns" hidden>
+        <span>Pattern:</span>
+        <button type="button" data-pattern="1" title="C64 left-arrow key (Left arrow)">←</button>
+        <button type="button" data-pattern="2">1</button>
+        <button type="button" data-pattern="3">2</button>
+      </nav>
+      <nav class="toolbar" aria-label="Demo controls">
+        <button type="button" id="advance">Enter demo →</button>
+        <button type="button" id="restart" title="Restart this part (R)">Restart</button>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M)">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P)">Pause</button>
+          <button type="button" id="fullscreen" title="Fullscreen (F)">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">SPACE to begin</p>
+        <p class="keys">SPACE next · ← / 1 / 2 patterns · R replay · M sound · P pause · F fullscreen</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>Stetsa, by Fantasy of Newage, reconstructed from the supplied Commodore 64 disk image.
+          Original graphics, fonts, scroll messages, and vector coordinates are preserved.
+          Phaser presents native JavaScript translations of the recovered routines.</p>
+        <p>The surrounding controls are browser additions. Sound starts after your first interaction.
+          The interlude advances automatically. The final wireframe animation loops.</p>
+        <p>Animation uses the NTSC clock and 263 raster lines. Raster timing and analog SID sound are
+          approximations. Credits and the first part restart their music after five minutes;
+          the other three songs use verified loops. See README.md and analysis/ANALYSIS.md for details.</p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>RCI Sucks — NPN / Commodore 64</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity"><h1>RCI SUCKS</h1><span>NPN · Commodore 64 demo</span></div>
+        <div class="edition">COMMODORE 64 <span>NTSC · PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="RCI Sucks display. Space advances to the next part."></div>
+        <div id="loading" role="status">Loading RCI Sucks…</div>
+      </section>
+      <nav id="pages" class="pages" aria-label="Demo sections"></nav>
+      <nav id="patterns" class="pages" aria-label="Bounce patterns" hidden>
+        <span>Pattern:</span>
+        <button type="button" data-pattern="1" aria-pressed="true">1</button>
+        <button type="button" data-pattern="2" aria-pressed="false">2</button>
+        <button type="button" data-pattern="3" aria-pressed="false">3</button>
+        <button type="button" data-pattern="4" aria-pressed="false">4</button>
+        <button type="button" data-pattern="5" aria-pressed="false">5</button>
+      </nav>
+      <nav class="toolbar" aria-label="Demo controls">
+        <button type="button" id="advance">Next part →</button>
+        <button type="button" id="restart" title="Restart this part (R)">Restart</button>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M)">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P)">Pause</button>
+          <button type="button" id="fullscreen" title="Fullscreen (F)">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">SPACE after the opening curtain</p>
+        <p class="keys">SPACE next · 1–5 patterns · R replay · F1 opening · M sound · P pause · F fullscreen</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>RCI Sucks by NPN, reconstructed from the supplied Commodore 64 program.
+          The original graphics, fonts, sprite patterns, and scroll messages are preserved.
+          Phaser presents JavaScript translations of the recovered routines.</p>
+        <p>The opening curtain responds to SPACE after it finishes opening. The Next part button
+          skips directly ahead. Part 2 offers five bounce patterns. F1 returns to the opening.</p>
+        <p>Sound starts after your first interaction. Animation follows NTSC timing and 263 raster lines.
+          Raster effects and analog SID sound are approximations. The browser controls are additions.</p>
+        <p>The portrait section, including its music, is restored from the replacement PRG.
+          The opening and final letter are silent in the original.
+          <a href="analysis/ANALYSIS.md">Analysis and fidelity notes</a>.</p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>

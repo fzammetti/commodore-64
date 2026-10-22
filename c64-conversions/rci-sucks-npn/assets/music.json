@@ -1,0 +1,42 @@
+{
+  "page1": {
+    "rate": 59.82626498976309,
+    "loopStart": 0,
+    "frames": 17948,
+    "verifiedLoop": false,
+    "init": 2064,
+    "play": 2070
+  },
+  "page2": {
+    "rate": 59.82626498976309,
+    "loopStart": 6,
+    "frames": 1542,
+    "verifiedLoop": true,
+    "init": 4220,
+    "play": 4288
+  },
+  "page3": {
+    "rate": 59.82626498976309,
+    "loopStart": 0,
+    "frames": 17948,
+    "verifiedLoop": false,
+    "init": 4099,
+    "play": 4096
+  },
+  "page4": {
+    "rate": 59.82626498976309,
+    "loopStart": 618,
+    "frames": 2154,
+    "verifiedLoop": true,
+    "init": 4096,
+    "play": 4102
+  },
+  "page5": {
+    "rate": 59.82626498976309,
+    "loopStart": 675,
+    "frames": 14435,
+    "verifiedLoop": true,
+    "init": 6142,
+    "play": 6237
+  }
+}

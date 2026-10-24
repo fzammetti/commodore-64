@@ -1,0 +1,20 @@
+{
+  "intro": {
+    "rate": 59.82626498976309,
+    "loopStart": 9505,
+    "frames": 9509,
+    "verifiedLoop": true,
+    "lastWrite": 9504,
+    "init": 6067,
+    "play": 4866
+  },
+  "template": {
+    "rate": 59.82626498976309,
+    "loopStart": 9529,
+    "frames": 9533,
+    "verifiedLoop": true,
+    "lastWrite": 9528,
+    "init": 6067,
+    "play": 4866
+  }
+}

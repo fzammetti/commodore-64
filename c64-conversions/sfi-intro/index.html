@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>SFI Intro — Commodore 64</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity"><h1>SFI INTRO</h1><span>Excelsior of ShadowForce International · 1989 C64 intro</span></div>
+        <div class="edition">COMMODORE 64 <span>NTSC · PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="SFI intro display. Space leaves the intro."></div>
+        <div id="loading" role="status">Loading SFI Intro…</div>
+      </section>
+      <nav class="toolbar" aria-label="Intro controls">
+        <button type="button" id="exit">Press SPACE</button>
+        <button type="button" id="restart" title="Restart the intro (R)">Restart</button>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M)">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P)">Pause</button>
+          <button type="button" id="fullscreen" title="Fullscreen (F)">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">SPACE leaves the intro, as on the C64</p>
+        <p class="keys">SPACE leave · R restart · M sound · P pause · F fullscreen</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>The SFI intro by Excelsior of ShadowForce International (1989), reconstructed from
+          the supplied Commodore 64 program. The original logo, character sets, sprite animations,
+          scroll texts, messages and music are preserved. Phaser presents JavaScript translations
+          of the recovered raster interrupts and message routine.</p>
+        <p>As on the C64, SPACE leaves the intro. It was written to run a game that is not on
+          this disk, so it drops to BASIC with a syntax error, just as it does in an emulator.
+          SPACE or R then runs the intro again.</p>
+        <p>Sound starts after your first interaction. Animation follows NTSC timing and 263 raster
+          lines, with the colour bars placed at the cycles traced in VICE. The SID sound is an
+          approximation. The browser controls are additions.
+          <a href="analysis/ANALYSIS.md">Analysis and fidelity notes</a>.</p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>TEA Intromaker I / Commodore 64</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity"><h1>TEA INTROMAKER I</h1><span>The Eastern Alliance · Excelsior of SFI · 1989</span></div>
+        <div class="edition">COMMODORE 64 <span>NTSC · PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="TEA Intromaker display. Space leaves the intro; the editor takes typed keys."></div>
+        <div id="loading" role="status">Loading TEA Intromaker I…</div>
+      </section>
+      <nav id="parts" class="pages" aria-label="Program parts"></nav>
+      <nav class="toolbar" aria-label="Controls">
+        <div class="options">
+          <button type="button" id="preview" aria-pressed="false" title="Run the intro the editor would save">Preview edited intro</button>
+          <button type="button" id="restart" title="Restart this part (R in the intro)">Restart</button>
+        </div>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M in the intro)">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P in the intro)">Pause</button>
+          <button type="button" id="fullscreen" title="Fullscreen (F in the intro)">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">SPACE runs the Intro/Editor</p>
+        <p class="keys">Intro: SPACE editor · R restart · M sound · P pause · F fullscreen · F1 intro from anywhere</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>TEA Intromaker I by Excelsior of SFI for The Eastern Alliance, reconstructed from the supplied
+          Commodore 64 program. The intro's font, screen, scroll texts, color tables, and music are recovered from the program.
+          Phaser presents JavaScript translations of its routines.</p>
+        <p>As on the C64, SPACE leaves the intro for the attached Intro/Editor I. In the editor, the keyboard
+          types into the C64: choose 1–6, type a scroll text ending in @, and press RETURN. Saving downloads the
+          INTRO file the original would write to disk, $0800–$2DFF with a $0800 load address.</p>
+        <p>Option 6 runs Compactor V4/S as far as its LOW-MEM prompt. The linking after that prompt needs a disk drive,
+          so this reconstruction does not include it. The button that previews the edited intro is a browser addition.
+          Animation follows NTSC timing and 263 raster lines. Analog SID sound is an approximation.
+          <a href="analysis/ANALYSIS.md">Analysis and fidelity notes</a>.</p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>

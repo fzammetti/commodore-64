@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>Star Demo — WSOW / Commodore 64</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity"><h1>STAR DEMO</h1><span>WSOW · Commodore 64 demo</span></div>
+        <div class="edition">COMMODORE 64 <span>NTSC · PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="WSOW Star Demo display. Space skips the picture reveal."></div>
+        <div id="loading" role="status">Loading Star Demo…</div>
+      </section>
+      <nav id="parts" class="pages" aria-label="Demo parts"></nav>
+      <nav class="toolbar" aria-label="Demo controls">
+        <button type="button" id="advance">Skip reveal →</button>
+        <button type="button" id="restart" title="Restart this part (R)">Restart</button>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M)">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P)">Pause</button>
+          <button type="button" id="fullscreen" title="Fullscreen (F)">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">The picture draws itself in</p>
+        <p class="keys">SPACE skip reveal · R replay · M sound · P pause · F fullscreen</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>Star Demo by WSOW (We Share Our Warez), coded by Ice, reconstructed from the supplied
+          Commodore 64 disk. The Koala picture is revealed one pixel row at a time. The scroller then
+          runs as eight multicolor sprites in the opened lower border. The original picture, sprite
+          font and message are preserved, including the garbage sprites for the message's digits.</p>
+        <p>The music is from The Last Ninja. As in the original, it begins with the scroller and
+          follows the CIA timer: 52.85 calls per second on an NTSC machine. It has been recorded
+          from the program's player and plays as SID register writes, looping where the tune loops.</p>
+        <p>Sound starts after your first interaction. Animation follows NTSC timing and 263 raster lines.
+          The original takes no input. Skipping the reveal and the browser controls are additions.
+          Analog SID sound is an approximation.</p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>

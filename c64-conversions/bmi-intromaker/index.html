@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>BMI Intromaker 1 — Commodore 64</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity"><h1>BMI INTROMAKER 1</h1><span>Black Magic Incorporated · Fantasy of NPN · 1988</span></div>
+        <div class="edition">COMMODORE 64 <span>NTSC · PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="Commodore 64 display."></div>
+        <div id="loading" role="status">Loading BMI Intromaker…</div>
+        <textarea id="typing" aria-label="Type on the Commodore 64" autocapitalize="characters"
+          autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+      </section>
+      <nav id="parts" class="pages" aria-label="Programs"></nav>
+      <nav class="toolbar" aria-label="Controls">
+        <button type="button" id="preview" hidden title="Run the intro you are editing">Test intro ▶</button>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false">Pause</button>
+          <button type="button" id="fullscreen">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">SPACE starts the BMI Intro Editor</p>
+        <p class="keys">Backspace DEL · Shift+Backspace INST · Home HOME · Shift+Home CLR · Alt+1–8 colors</p>
+      </footer>
+      <section class="drive" aria-labelledby="drive-title">
+        <div class="drive-heading">
+          <h2 id="drive-title">Disk · device 8</h2>
+          <label class="add">Add PRG…<input type="file" id="add-file" accept=".prg,application/octet-stream" multiple></label>
+        </div>
+        <ul id="files"></ul>
+        <p class="drive-footer"><span id="free"></span><span id="drive-status" aria-live="polite">00, OK,00,00</span></p>
+      </section>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>BMI Intromaker 1 is an intro, the intro editor that made it, and the linker that joined
+          them, all on one disk. SPACE in the intro starts the editor. There you can type both scroll
+          texts and three title lines, save the intro to the virtual disk and run the compactor. Its own
+          instructions page explains the linking steps. Files saved on the disk can be downloaded and run
+          on a real C64 or in an emulator.</p>
+        <p>The intro, the KERNAL screen editor the BMI editor relies on, and the compactor are
+          translated to JavaScript. Each was checked against the original 6502 code. The compactor
+          produces the same packed file as the C64 does.</p>
+        <p>Timing is NTSC: 65 cycles × 263 lines, about 59.83 frames per second. <em>Test intro</em>, the disk
+          panel and faster disk transfers are browser additions. SID sound is an approximation and starts after
+          your first interaction. <a href="README.md">Analysis and fidelity notes</a>.</p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>

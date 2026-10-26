@@ -1,0 +1,16 @@
+tools/python/
+tools/__pycache__/
+analysis/chrome-*/
+analysis/*.log
+analysis/*.ram
+analysis/*.io
+analysis/*.vic
+analysis/*.idx
+analysis/render-*.png
+analysis/frame-*.png
+analysis/player-writes.json
+analysis/player-loop.json
+analysis/trace.png
+analysis/first.png
+analysis/intro-disassembly.txt
+analysis/raster-fidelity.json.gz

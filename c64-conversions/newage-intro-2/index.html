@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <title>Newage · Mr. Wino intro</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/phaser.js" defer></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="heading">
+      <div class="identity"><h1>NEWAGE</h1><span>Mr. Wino +++<br>Fantasy · 1988</span></div>
+      <div class="edition">COMMODORE 64<span>NTSC · PHASER EDITION</span></div>
+    </header>
+    <section class="monitor" aria-label="Newage crack intro">
+      <div id="stage" tabindex="0" aria-label="Animated intro. Space ends the intro."></div>
+      <div id="loading" role="status">Loading intro…</div>
+      <div id="ending" hidden><p>End of intro</p><button type="button" id="replay">Replay intro</button></div>
+    </section>
+    <nav class="toolbar" aria-label="Intro controls">
+      <button type="button" id="exit" title="End the intro (Space)">Exit intro →</button>
+      <button type="button" id="restart" title="Restart (R)">Restart</button>
+      <div class="options">
+        <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M)">Sound: off</button>
+        <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P)">Pause</button>
+        <button type="button" id="fullscreen" title="Fullscreen (F)">Fullscreen</button>
+      </div>
+    </nav>
+    <footer>
+      <p id="hint" aria-live="polite">SPACE to end the intro · Enable sound to hear the original music</p>
+      <p class="keys">R replay · M sound · P pause · F fullscreen</p>
+    </footer>
+    <details class="about">
+      <summary>About this intro</summary>
+      <p>Newage's Mr. Wino +++ crack intro, dated May 17, 1988, with intro code by Fantasy
+        and import credit to The Hunter. Reconstructed from the supplied Commodore 64 disk.</p>
+      <p>Original character artwork, color effects, scrolling text, and SID music at NTSC speed.
+        Space ends the intro where the original starts the game. The game is not included.</p>
+    </details>
+    <p id="error" role="alert" hidden></p>
+    <noscript>This intro requires JavaScript.</noscript>
+  </main>
+</body>
+</html>

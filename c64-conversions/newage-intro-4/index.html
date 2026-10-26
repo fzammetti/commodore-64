@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>NewAge Sorcerer Lord Intro — Commodore 64</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity"><h1>NEWAGE INTRO</h1><span>Intro by Fantasy for NewAge's release of Sorcerer Lord · Commodore 64 crack intro</span></div>
+        <div class="edition">COMMODORE 64 <span>NTSC · PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="NewAge Sorcerer Lord intro display. Any key leaves the intro."></div>
+        <div id="loading" role="status">Loading the NewAge Sorcerer Lord intro…</div>
+      </section>
+      <nav class="toolbar" aria-label="Intro controls">
+        <button type="button" id="exit">Press a key</button>
+        <button type="button" id="restart" title="Restart the intro (R)">Restart</button>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M)">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P)">Pause</button>
+          <button type="button" id="fullscreen" title="Fullscreen (F)">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">Any key leaves the intro, as on the C64</p>
+        <p class="keys">Other keys leave the intro · R restart · M sound · P pause · F fullscreen</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>The intro Fantasy wrote for the NewAge Importing Crew's release of Sorcerer Lord
+          (April 15, 1988), reconstructed from the supplied Commodore 64 program. The original
+          character set, multicolour logo, texts, both scroll texts and the SID drone are
+          preserved. Phaser presents JavaScript translations of the recovered main loop and
+          its five raster interrupts.</p>
+        <p>As on the C64, any key leaves the intro: it clears the screen, resets the C64 and
+          copies the game into place. The game itself is not part of this reconstruction, so it
+          stops on the blue screen where Sorcerer Lord would start. Like the original, the exit
+          sometimes hangs, leaving the screen frozen. A key or R then runs the intro again.</p>
+        <p>Sound starts after your first interaction. Animation follows NTSC timing and 263
+          raster lines, with every raster colour and store placed at the cycle VICE runs it,
+          so the logo's colour stripes slant exactly as on the C64. One cleanup: the X scroll,
+          the multicolour mode and the border colour change only between lines, which removes
+          a split line at the top of the logo and a few stray pixels where the scrollers start.
+          The SID sound is an approximation. The browser controls are additions.</p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101014">
+    <title>Lethal Intro — Commodore 64</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/phaser.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="heading">
+        <div class="identity"><h1>LETHAL INTRO</h1><span>Intro by Fantasy for Lethal's New Barbarian II · Commodore 64 crack intro</span></div>
+        <div class="edition">COMMODORE 64 <span>NTSC · PHASER EDITION</span></div>
+      </header>
+      <section class="monitor" aria-label="Recreated Commodore 64 display">
+        <div id="stage" tabindex="0" aria-label="Lethal intro display. Space leaves the intro."></div>
+        <div id="loading" role="status">Loading the Lethal intro…</div>
+      </section>
+      <nav class="toolbar" aria-label="Intro controls">
+        <button type="button" id="exit">Press SPACE</button>
+        <button type="button" id="restart" title="Restart the intro (R)">Restart</button>
+        <div class="options">
+          <button type="button" id="sound" aria-pressed="false" title="Toggle sound (M)">Sound: off</button>
+          <button type="button" id="pause" aria-pressed="false" title="Pause or resume (P)">Pause</button>
+          <button type="button" id="fullscreen" title="Fullscreen (F)">Fullscreen</button>
+        </div>
+      </nav>
+      <footer>
+        <p id="hint" aria-live="polite">SPACE leaves the intro, as on the C64</p>
+        <p class="keys">SPACE leave · R restart · M sound · P pause · F fullscreen</p>
+      </footer>
+      <details class="about">
+        <summary>About this reconstruction</summary>
+        <p>The "make-shift intro" Fantasy wrote for Lethal's crack of New Barbarian II,
+          reconstructed from the supplied Commodore 64 program. The original character set,
+          texts, scroll text and music are preserved. Phaser presents JavaScript translations
+          of the recovered raster interrupt.</p>
+        <p>As on the C64, SPACE leaves the intro: it resets the screen and copies the game into
+          place. The game itself is not part of this reconstruction, so it stops on that blue
+          screen, where New Barbarian II would start. SPACE or R then runs the intro again.</p>
+        <p>Sound starts after your first interaction. Animation follows NTSC timing and 263 raster
+          lines, with the raster bars and the starfield's stores placed at the cycles traced in
+          VICE. The SID sound is an approximation. The browser controls are additions.</p>
+      </details>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>
